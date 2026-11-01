@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#190e19">
   <title>Happy Birthday, riya!</title>
-  <link rel="stylesheet" href="riya-birthday.css?v=balloon-button-top-20261102">
+  <link rel="stylesheet" href="riya-birthday.css?v=balloon-image-button-20261102">
 </head>
 
 <body>
@@ -34,7 +34,11 @@
           makes life brighter.</p>
         <div class="hero-actions">
           <a class="primary-button" href="#memories">See your memories <span>↓</span></a>
-          <button id="balloonButton" class="primary-button balloon-button" type="button"><span class="button-balloon">🎈</span> Let the balloons fly</button>
+          <button id="balloonButton" class="balloon-launch-card" type="button" aria-label="Click to send birthday balloons flying">
+            <img src="riya-photos/birthday-party-background.jpg" alt="" aria-hidden="true">
+            <span class="balloon-launch-copy"><b>Make it fly</b><small>Tap to release balloons</small></span>
+            <span class="balloon-launch-icon" aria-hidden="true">🎈</span>
+          </button>
         </div>
         <button class="voice-greeting" id="voiceGreeting" type="button" aria-label="Play the birthday greeting">🔊 Tap
           to hear the birthday wish</button>

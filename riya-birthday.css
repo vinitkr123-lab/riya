@@ -440,6 +440,28 @@ footer b { color: #ff8fb4; }
 .assistant-form button { color: #321626; background: #f39ab8; }
 
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; }
+.balloon-launch-card {
+    min-height: 70px;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    padding: 6px 12px 6px 7px;
+    border: 1px solid rgba(255, 174, 201, .46);
+    border-radius: 16px;
+    color: #fff1f5;
+    background: linear-gradient(135deg, rgba(68, 36, 60, .98), rgba(36, 21, 38, .98));
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .22), inset 0 1px rgba(255,255,255,.08);
+    text-align: left;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.balloon-launch-card:hover { transform: translateY(-3px); border-color: #ffc0d2; box-shadow: 0 14px 30px rgba(0,0,0,.3); }
+.balloon-launch-card:focus-visible { outline: 3px solid #ff9fbe; outline-offset: 4px; }
+.balloon-launch-card img { width: 88px; height: 56px; object-fit: cover; object-position: center 34%; border: 1px solid rgba(255, 210, 224, .4); border-radius: 10px; }
+.balloon-launch-copy { display: grid; gap: 4px; }
+.balloon-launch-copy b { color: #ffe4ed; font: 700 12px var(--sans); }
+.balloon-launch-copy small { color: #e0c6d1; font: 500 9px var(--sans); }
+.balloon-launch-icon { margin-left: 2px; font-size: 23px; filter: drop-shadow(0 2px 5px rgba(255, 143, 180, .38)); }
 .surprise-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .balloon-button { border-color: rgba(242, 201, 130, .54); background: linear-gradient(135deg, #46303c, #2a1b2a); }
 .balloon-button:hover { box-shadow: 0 14px 30px rgba(0, 0, 0, .32); }
