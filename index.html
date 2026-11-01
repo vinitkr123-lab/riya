@@ -13,11 +13,11 @@
   <div class="glow glow-one"></div>
   <div class="glow glow-two"></div>
   <header class="birthday-nav">
-    <a class="monogram" href="riya-birthday.html">R<span>✦</span></a>
+    <a class="monogram" href="#top" aria-label="Back to the top">R<span>✦</span></a>
     <a href="#memories" class="nav-link">The memories ↓</a>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="hero-copy">
         <span class="eyebrow countdown-label"><i></i><span id="birthdayCountdownLabel">COUNTDOWN TO 3
             NOVEMBER</span><i></i></span>
@@ -210,17 +210,6 @@
       window.speechSynthesis.speak(greeting);
     }
     voiceGreeting.addEventListener('click', speakBirthdayGreeting);
-    let greetingStarted = false;
-    function startGreetingFromGesture() {
-      if (greetingStarted) return;
-      greetingStarted = true;
-      speakBirthdayGreeting();
-    }
-    voiceGreeting.addEventListener('click', startGreetingFromGesture);
-    document.addEventListener('pointerdown', startGreetingFromGesture, { once: true });
-    window.addEventListener('load', () => window.setTimeout(() => {
-      if (!greetingStarted) speakBirthdayGreeting();
-    }, 900), { once: true });
     const memoryButtons = [...document.querySelectorAll('.memory-image')];
     const viewer = document.querySelector('.photo-viewer');
     const viewerImage = viewer.querySelector('img');

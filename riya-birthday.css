@@ -941,4 +941,267 @@ body::before {
 .voice-greeting { margin:18px 0 0; padding:12px 16px; border:1px solid rgba(239,166,182,.45); border-radius:999px; background:rgba(50,30,45,.88); box-shadow:0 8px 24px rgba(0,0,0,.22); }
 @media(max-width:760px) { .voice-greeting { margin-top:14px; } }
 
+/* Refined birthday edition */
+:root {
+    --night: #1b101b;
+    --panel: #2a1c29;
+    --cream: #fff8f2;
+    --muted: #d2bdc6;
+    --rose: #f2a7bd;
+    --gold: #f5dda5;
+    --line: rgba(255, 239, 232, .16);
+}
+
+body {
+    background: #1b101b;
+}
+
+body::before {
+    background: linear-gradient(180deg, rgba(27, 16, 27, .68), rgba(27, 16, 27, .94) 56rem),
+        url('riya-photos/birthday-background.jpeg') center 28% / cover no-repeat;
+    filter: blur(0);
+    transform: none;
+}
+
+.birthday-nav {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    height: 76px;
+    border-bottom-color: rgba(255, 239, 232, .12);
+    background: rgba(27, 16, 27, .66);
+    backdrop-filter: blur(18px);
+}
+
+.monogram {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border: 1px solid rgba(245, 221, 165, .42);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .06);
+    font-size: 25px;
+}
+
+.hero {
+    width: min(1180px, calc(100% - 56px));
+    min-height: 680px;
+    padding: 84px 0 95px;
+    gap: 72px;
+}
+
+.hero-copy .eyebrow {
+    font-size: 10px;
+    letter-spacing: .25em;
+}
+
+h1 {
+    font-size: clamp(68px, 8.6vw, 112px);
+    line-height: .95;
+}
+
+h1 em,
+h2 em {
+    color: #f4a5bd;
+}
+
+.hero-note {
+    max-width: 410px;
+    font-size: 15px;
+}
+
+.birthday-countdown div {
+    min-width: 74px;
+    padding: 12px 7px 10px;
+    border-color: rgba(242, 167, 189, .34);
+    border-radius: 14px;
+    background: rgba(40, 24, 39, .74);
+    box-shadow: inset 0 1px rgba(255, 255, 255, .06), 0 8px 24px rgba(0, 0, 0, .12);
+}
+
+.birthday-countdown strong {
+    font-size: 29px;
+}
+
+.primary-button {
+    min-height: 51px;
+    padding: 0 23px;
+    border-color: rgba(255, 211, 220, .56);
+    background: linear-gradient(135deg, rgba(229, 128, 160, .28), rgba(239, 215, 156, .12));
+    box-shadow: 0 12px 30px rgba(11, 5, 12, .22);
+}
+
+.hero-photo-wrap {
+    width: min(390px, 100%);
+    padding: 16px;
+}
+
+.hero-photo-wrap::before {
+    border: 1px solid rgba(245, 221, 165, .56);
+    border-radius: 210px 210px 18px 18px;
+}
+
+.hero-photo-frame {
+    height: 490px;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 200px 200px 15px 15px;
+    box-shadow: 0 28px 85px rgba(5, 2, 7, .46);
+}
+
+.photo-sticker {
+    border-radius: 999px;
+    background: rgba(44, 29, 43, .92);
+    backdrop-filter: blur(12px);
+}
+
+.wish-section {
+    padding-bottom: 112px;
+}
+
+.wish-card {
+    padding: 45px 55px 40px;
+    border-color: rgba(255, 239, 232, .2);
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(76, 43, 65, .72), rgba(34, 21, 34, .82));
+    box-shadow: 0 24px 75px rgba(5, 2, 7, .24), inset 0 1px rgba(255, 255, 255, .08);
+    backdrop-filter: blur(16px);
+}
+
+.wish-text {
+    font-size: clamp(22px, 3vw, 29px);
+}
+
+.memories-section {
+    width: min(1180px, calc(100% - 56px));
+    padding-top: 10px;
+    padding-bottom: 120px;
+}
+
+.section-heading {
+    margin-bottom: 38px;
+}
+
+.section-heading .eyebrow {
+    letter-spacing: .24em;
+}
+
+h2 {
+    font-size: clamp(42px, 5.4vw, 64px);
+}
+
+.memory-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 24px;
+}
+
+.memory-card {
+    padding: 10px 10px 14px;
+    border: 1px solid rgba(255, 239, 232, .14);
+    border-radius: 17px;
+    background: linear-gradient(145deg, rgba(54, 35, 51, .82), rgba(34, 22, 34, .82));
+    box-shadow: 0 15px 38px rgba(8, 3, 9, .2), inset 0 1px rgba(255, 255, 255, .04);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(242, 167, 189, .42);
+    box-shadow: 0 22px 46px rgba(8, 3, 9, .3);
+}
+
+.offset-card {
+    margin-top: 0;
+}
+
+.memory-image {
+    height: 370px;
+    border: 0;
+    border-radius: 11px;
+    background: #352635;
+}
+
+.memory-image img {
+    object-position: center 30%;
+}
+
+.memory-caption {
+    min-height: 42px;
+    padding: 7px 4px 0;
+    color: #fff0e8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.memory-caption a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 9px;
+    border: 1px solid rgba(245, 221, 165, .24);
+    border-radius: 999px;
+    background: rgba(245, 221, 165, .08);
+    font-size: 10px;
+}
+
+.memory-wish {
+    min-height: 38px;
+    margin: 2px 4px 0;
+    color: #decbd3;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.surprise-section {
+    border-color: rgba(255, 239, 232, .13);
+    background: radial-gradient(ellipse at 50% 70%, rgba(165, 83, 123, .2), transparent 68%);
+}
+
+footer {
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+@media(max-width:900px) {
+    .hero { gap: 36px; }
+    .hero-photo-frame { height: 420px; }
+    .memory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .memory-image { height: clamp(260px, 48vw, 390px); }
+}
+
+@media(max-width:760px) {
+    .birthday-nav { height: 66px; }
+    .hero {
+        width: min(560px, calc(100% - 36px));
+        padding: 68px 0 70px;
+        gap: 37px;
+    }
+    h1 { font-size: clamp(64px, 14vw, 90px); }
+    .hero-note { margin-left: auto; margin-right: auto; }
+    .hero-photo-wrap { width: min(330px, 82vw); }
+    .hero-photo-frame { height: 410px; }
+    .wish-section { padding-bottom: 78px; }
+    .wish-card { padding: 38px 25px 32px; }
+    .memories-section {
+        width: min(640px, calc(100% - 32px));
+        padding-bottom: 85px;
+    }
+    .memory-grid { gap: 18px 13px; }
+    .memory-card { padding: 7px 7px 11px; border-radius: 13px; }
+    .memory-image { height: clamp(220px, 55vw, 340px); border-radius: 8px; }
+    .memory-wish { font-size: 11px; }
+}
+
+@media(max-width:430px) {
+    .hero { width: calc(100% - 30px); }
+    .birthday-countdown { grid-template-columns: repeat(4, minmax(53px, 1fr)); gap: 6px; }
+    .birthday-countdown div { min-width: 0; }
+    .birthday-countdown strong { font-size: 24px; }
+    .memory-grid { gap: 14px 9px; }
+    .memory-image { height: 220px; }
+    .memory-caption { align-items: start; font-size: 10px; }
+    .memory-caption a { padding: 5px 7px; font-size: 9px; }
+    .memory-wish { font-size: 10px; }
+}
+
 
