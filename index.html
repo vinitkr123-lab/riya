@@ -307,17 +307,17 @@
 
     document.querySelector('#balloonButton').addEventListener('click', () => {
       const colors = ['gold', 'black', 'gold', 'black', 'rose'];
-      for (let i = 0; i < 22; i++) {
+      for (let i = 0; i < 36; i++) {
         const balloon = document.createElement('span');
         balloon.className = `flying-balloon balloon-${colors[i % colors.length]}`;
         balloon.setAttribute('aria-hidden', 'true');
         balloon.style.left = `${3 + Math.random() * 94}vw`;
         balloon.style.setProperty('--drift', `${Math.random() * 150 - 75}px`);
-        balloon.style.setProperty('--duration', `${8 + Math.random() * 5}s`);
-        balloon.style.setProperty('--size', `${38 + Math.random() * 23}px`);
-        balloon.style.setProperty('--delay', `${Math.random() * 1.8}s`);
+        balloon.style.setProperty('--duration', '25s');
+        balloon.style.setProperty('--size', `${42 + Math.random() * 25}px`);
+        balloon.style.setProperty('--delay', `${Math.random() * 1.2}s`);
         document.body.append(balloon);
-        window.setTimeout(() => balloon.remove(), 15000);
+        window.setTimeout(() => balloon.remove(), 27000);
       }
     });
   </script>
