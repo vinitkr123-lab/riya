@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#190e19">
   <title>Happy Birthday, riya!</title>
-  <link rel="stylesheet" href="riya-birthday.css?v=dark-pink-20261102">
+  <link rel="stylesheet" href="riya-birthday.css?v=dark-pink-balloons-20261102">
 </head>
 
 <body>
@@ -142,8 +142,11 @@
     <section class="surprise-section"><span class="surprise-star">✧</span>
       <p class="eyebrow">ONE LAST THING</p>
       <h2>Here's to your<br><em>brightest year yet.</em></h2>
-      <p>Keep being wonderfully, unmistakably you.</p><button id="confettiButton" class="primary-button"
-        type="button">Make a little magic <span>✦</span></button>
+      <p>Keep being wonderfully, unmistakably you.</p>
+      <div class="surprise-actions">
+        <button id="confettiButton" class="primary-button" type="button">Make a little magic <span>✦</span></button>
+        <button id="balloonButton" class="primary-button balloon-button" type="button"><span class="button-balloon">🎈</span> Let the balloons fly</button>
+      </div>
     </section>
   </main>
   <footer><span>Made with <b>♥</b> for Riya</span><span>Happy Birthday · Always celebrated</span></footer>
@@ -293,6 +296,22 @@
         piece.style.setProperty('--drift', `${Math.random() * 150 - 75}px`);
         document.body.append(piece);
         window.setTimeout(() => piece.remove(), 5200);
+      }
+    });
+
+    document.querySelector('#balloonButton').addEventListener('click', () => {
+      const colors = ['gold', 'black', 'gold', 'black', 'rose'];
+      for (let i = 0; i < 22; i++) {
+        const balloon = document.createElement('span');
+        balloon.className = `flying-balloon balloon-${colors[i % colors.length]}`;
+        balloon.setAttribute('aria-hidden', 'true');
+        balloon.style.left = `${3 + Math.random() * 94}vw`;
+        balloon.style.setProperty('--drift', `${Math.random() * 150 - 75}px`);
+        balloon.style.setProperty('--duration', `${8 + Math.random() * 5}s`);
+        balloon.style.setProperty('--size', `${38 + Math.random() * 23}px`);
+        balloon.style.setProperty('--delay', `${Math.random() * 1.8}s`);
+        document.body.append(balloon);
+        window.setTimeout(() => balloon.remove(), 15000);
       }
     });
   </script>

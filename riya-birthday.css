@@ -438,3 +438,65 @@ footer b { color: #ff8fb4; }
 .assistant-form { border-top-color: rgba(255, 222, 235, .15); }
 .assistant-form input { border-color: rgba(255, 222, 235, .2); color: #fff0f4; background: #170d18; }
 .assistant-form button { color: #321626; background: #f39ab8; }
+
+.surprise-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.balloon-button { border-color: rgba(242, 201, 130, .54); background: linear-gradient(135deg, #46303c, #2a1b2a); }
+.balloon-button:hover { box-shadow: 0 14px 30px rgba(0, 0, 0, .32); }
+.button-balloon { font-size: 15px; }
+.flying-balloon {
+    position: fixed;
+    z-index: 30;
+    bottom: -130px;
+    width: var(--size);
+    height: calc(var(--size) * 1.2);
+    border: 1px solid rgba(255, 255, 255, .24);
+    border-radius: 50% 50% 47% 47%;
+    pointer-events: none;
+    animation: balloon-rise var(--duration) var(--delay) ease-in forwards;
+    will-change: transform, opacity;
+}
+.flying-balloon::before {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 50%;
+    width: 9px;
+    height: 8px;
+    content: '';
+    background: inherit;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform: translateX(-50%);
+}
+.flying-balloon::after {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    width: 1px;
+    height: 48px;
+    content: '';
+    background: linear-gradient(rgba(255, 240, 217, .72), rgba(255, 240, 217, .08));
+}
+.balloon-gold {
+    background: radial-gradient(ellipse at 32% 23%, rgba(255,255,255,.92), transparent 11%), radial-gradient(ellipse at 34% 25%, #ffe8a9 0, #e7a83d 35%, #9d5a18 78%, #3d2115 100%);
+    box-shadow: inset -5px -8px 13px rgba(59, 28, 7, .34), 0 7px 18px rgba(215, 156, 61, .2);
+}
+.balloon-black {
+    background: radial-gradient(ellipse at 31% 21%, rgba(255,255,255,.66), transparent 9%), radial-gradient(ellipse at 37% 28%, #49434a 0, #151319 44%, #030305 82%);
+    box-shadow: inset -6px -8px 12px rgba(0,0,0,.74), 0 8px 18px rgba(0,0,0,.3);
+}
+.balloon-rose {
+    background: radial-gradient(ellipse at 31% 21%, rgba(255,255,255,.76), transparent 10%), radial-gradient(ellipse at 38% 28%, #ffb2ca 0, #cb557e 48%, #70263f 100%);
+    box-shadow: inset -6px -8px 12px rgba(52, 8, 27, .38), 0 8px 18px rgba(0,0,0,.2);
+}
+@keyframes balloon-rise {
+    0% { transform: translate3d(0, 0, 0) rotate(-8deg); opacity: 0; }
+    9% { opacity: 1; }
+    50% { transform: translate3d(calc(var(--drift) * -.25), -55vh, 0) rotate(8deg); }
+    100% { transform: translate3d(var(--drift), -125vh, 0) rotate(-9deg); opacity: 0; }
+}
+@media(max-width:560px) {
+    .surprise-actions { flex-direction: column; align-items: center; }
+    .surprise-actions .primary-button { min-width: 218px; }
+}
+@media(prefers-reduced-motion:reduce) {
+    .flying-balloon { animation-duration: 1ms !important; }
+}
