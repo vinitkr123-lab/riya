@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#190e19">
   <title>Happy Birthday, riya!</title>
-  <link rel="stylesheet" href="riya-birthday.css?v=dark-pink-balloons-20261102">
+  <link rel="stylesheet" href="riya-birthday.css?v=balloon-button-top-20261102">
 </head>
 
 <body>
@@ -32,7 +32,10 @@
         </p>
         <p class="hero-note">A little corner of the internet, made with love<br class="desktop-only"> for someone who
           makes life brighter.</p>
-        <a class="primary-button" href="#memories">See your memories <span>↓</span></a>
+        <div class="hero-actions">
+          <a class="primary-button" href="#memories">See your memories <span>↓</span></a>
+          <button id="balloonButton" class="primary-button balloon-button" type="button"><span class="button-balloon">🎈</span> Let the balloons fly</button>
+        </div>
         <button class="voice-greeting" id="voiceGreeting" type="button" aria-label="Play the birthday greeting">🔊 Tap
           to hear the birthday wish</button>
       </div>
@@ -145,7 +148,6 @@
       <p>Keep being wonderfully, unmistakably you.</p>
       <div class="surprise-actions">
         <button id="confettiButton" class="primary-button" type="button">Make a little magic <span>✦</span></button>
-        <button id="balloonButton" class="primary-button balloon-button" type="button"><span class="button-balloon">🎈</span> Let the balloons fly</button>
       </div>
     </section>
   </main>

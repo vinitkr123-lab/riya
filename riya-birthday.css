@@ -439,6 +439,7 @@ footer b { color: #ff8fb4; }
 .assistant-form input { border-color: rgba(255, 222, 235, .2); color: #fff0f4; background: #170d18; }
 .assistant-form button { color: #321626; background: #f39ab8; }
 
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; }
 .surprise-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .balloon-button { border-color: rgba(242, 201, 130, .54); background: linear-gradient(135deg, #46303c, #2a1b2a); }
 .balloon-button:hover { box-shadow: 0 14px 30px rgba(0, 0, 0, .32); }
@@ -494,6 +495,7 @@ footer b { color: #ff8fb4; }
     100% { transform: translate3d(var(--drift), -125vh, 0) rotate(-9deg); opacity: 0; }
 }
 @media(max-width:560px) {
+    .hero-actions { justify-content: center; }
     .surprise-actions { flex-direction: column; align-items: center; }
     .surprise-actions .primary-button { min-width: 218px; }
 }
