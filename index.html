@@ -210,6 +210,9 @@
       window.speechSynthesis.speak(greeting);
     }
     voiceGreeting.addEventListener('click', speakBirthdayGreeting);
+    window.addEventListener('load', () => {
+      window.setTimeout(speakBirthdayGreeting, 500);
+    }, { once: true });
     const memoryButtons = [...document.querySelectorAll('.memory-image')];
     const viewer = document.querySelector('.photo-viewer');
     const viewerImage = viewer.querySelector('img');
