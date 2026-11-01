@@ -346,3 +346,95 @@ footer b { color: var(--rose); }
     .viewer-prev { left: 3px; }
     .viewer-next { right: 3px; }
 }
+
+/* Dark plum and pink birthday palette */
+:root {
+    color-scheme: dark;
+    --ink: #fff1f5;
+    --muted: #d7bdc8;
+    --rose: #ff8fb4;
+    --rose-soft: #482338;
+    --cream: #fff4f6;
+    --gold: #efc982;
+    --line: rgba(255, 222, 235, .16);
+}
+body { background: #170d18; color: var(--ink); }
+body::before { opacity: .76; }
+.birthday-nav {
+    border-bottom-color: rgba(255, 201, 222, .14);
+    background: rgba(27, 14, 27, .86);
+}
+.monogram { border-color: rgba(255, 143, 180, .45); color: #ff9fbe; background: rgba(44, 25, 43, .9); }
+.nav-link { color: #e2cbd4; }
+.hero::before {
+    border-color: rgba(255, 180, 205, .25);
+    background: rgba(31, 16, 31, .87);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .3);
+}
+h1, h2 { color: #fff2f6; }
+h1 em, h2 em { color: #ff91b5; }
+.eyebrow { color: #ff9fbe; }
+.hero-copy .eyebrow i { background: #ff9fbe; }
+.birthday-countdown div {
+    border-color: rgba(255, 143, 180, .3);
+    background: rgba(55, 29, 50, .88);
+    box-shadow: inset 0 1px rgba(255,255,255,.06), 0 8px 22px rgba(0,0,0,.18);
+}
+.birthday-countdown strong { color: #ffc0d2; }
+.birthday-countdown span { color: #dfc6d0; }
+.countdown-note { color: #ff9fbe; }
+.hero-note { color: #e1cdd5; }
+.primary-button {
+    border-color: rgba(255, 174, 201, .52);
+    color: #fff6f8;
+    background: linear-gradient(135deg, #c94f7d, #9e3d69);
+    box-shadow: 0 10px 26px rgba(151, 48, 90, .3);
+}
+.voice-greeting { border-color: rgba(255, 143, 180, .36); color: #ffb3c9; background: rgba(54, 29, 49, .88); }
+.voice-greeting:hover { background: #48283f; }
+.photo-sticker { border-color: rgba(255, 210, 224, .2); color: #fff0f4; background: rgba(48, 26, 45, .94); }
+.sticker-top { color: #ffc0d2; }
+.wish-card {
+    border-color: rgba(255, 143, 180, .24);
+    background: linear-gradient(135deg, rgba(57, 30, 51, .97), rgba(36, 21, 37, .97));
+    box-shadow: 0 20px 55px rgba(0,0,0,.24), inset 0 1px rgba(255,255,255,.05);
+}
+.wish-heart, .wish-text em { color: #ff9fbe; }
+.wish-text { color: #fff0f4; }
+.wish-sign { color: #f2d18e; }
+.section-heading {
+    border-color: rgba(255, 186, 207, .18);
+    background: rgba(35, 19, 35, .91);
+    box-shadow: 0 12px 34px rgba(0,0,0,.2);
+}
+.section-hint { color: #ddc5cf; }
+.memory-card {
+    border-color: rgba(255, 186, 207, .16);
+    background: rgba(39, 22, 39, .95);
+    box-shadow: 0 12px 34px rgba(0,0,0,.24);
+}
+.memory-card:hover { box-shadow: 0 18px 40px rgba(0,0,0,.34); }
+.memory-image { background: #382536; }
+.memory-caption { color: #fff0f4; }
+.memory-caption a { border-color: rgba(255, 187, 210, .26); color: #ffd0dd; background: rgba(198, 73, 120, .16); }
+.memory-caption a:hover { background: rgba(198, 73, 120, .3); }
+.memory-wish { color: #ddc8d1; }
+.surprise-section {
+    border-color: rgba(255, 186, 207, .15);
+    background: linear-gradient(rgba(29, 15, 29, .9), rgba(29, 15, 29, .9)), radial-gradient(ellipse at 50% 80%, rgba(213, 79, 134, .25), transparent 65%);
+}
+.surprise-section>p:not(.eyebrow) { color: #ddc8d1; }
+.surprise-star { color: #f3cf8b; }
+footer { color: #d6bec8; background: rgba(27, 14, 27, .88); }
+footer b { color: #ff8fb4; }
+.assistant-launcher { border-color: rgba(255, 143, 180, .32); color: #fff0f4; background: rgba(48, 26, 45, .96); }
+.assistant-launcher span { color: #f3ce8c; }
+.assistant-panel { border-color: rgba(255, 186, 207, .2); color: #fff0f4; background: #211421; }
+.assistant-header { border-bottom-color: rgba(255, 222, 235, .15); background: #392037; }
+.assistant-avatar { color: #ffb4ca; background: #4b2943; }
+.assistant-header small { color: #d7bdc8; }
+.bot-message { border-color: rgba(255, 222, 235, .15); color: #fff0f4; background: #382337; }
+.user-message { color: #321626; background: #f39ab8; }
+.assistant-form { border-top-color: rgba(255, 222, 235, .15); }
+.assistant-form input { border-color: rgba(255, 222, 235, .2); color: #fff0f4; background: #170d18; }
+.assistant-form button { color: #321626; background: #f39ab8; }
