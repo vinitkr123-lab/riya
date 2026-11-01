@@ -31,10 +31,8 @@ body::before {
     inset: 0;
     content: '';
     pointer-events: none;
-    background:
-        radial-gradient(ellipse at 8% 8%, rgba(246, 205, 216, .58), transparent 33rem),
-        radial-gradient(ellipse at 96% 48%, rgba(244, 224, 190, .44), transparent 30rem),
-        linear-gradient(180deg, #fffaf6 0%, #fff5f1 52%, #fffaf5 100%);
+    background: url('riya-photos/birthday-party-background.jpg') center 35% / cover no-repeat fixed;
+    opacity: .2;
 }
 .glow { position: absolute; z-index: -1; width: 250px; height: 250px; border-radius: 50%; filter: blur(100px); opacity: .22; pointer-events: none; }
 .glow-one { top: 240px; left: -170px; background: #ed91ad; }
